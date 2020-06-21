@@ -1,0 +1,2132 @@
+<link rel="stylesheet" href="c.css">
+<!-- saved from url=(0043)file:///C:/Users/Bhavesh/Desktop/chart.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></head><body><div class="site-title">
+			<a id="siteTitle" class="navbar-brand topnav" href="file:///C:/Users/Bhavesh/Desktop/landing.jsp"></a>
+		</div>
+<div class="container">
+			<div class="pageHeading">
+				<div class="col-md-4 col-md-offset-3 searchEvaluation">
+					<div class="row">
+						<div class="col-xs-12">
+							
+	
+	<div id="custom-search-input">
+		<form style="display:none" id="navigationForm" action="file:///C:/Users/Bhavesh/Desktop/evaluation.jsp" method="POST">
+			<input type="text" id="navigationQuery" name="navigationQuery">
+			<input type="text" id="navigationViewList" name="navigationViewList" value="false">
+		</form>
+						<div class="input-group col-md-12">
+							<span id="recentViewedIcon" onclick="searchController.showRecentlyEvaluated()" class="input-group-addon" data-toggle="tooltip" title="" data-placement="right"><i class="glyphicon glyphicon-chevron-down"></i></span>
+							<input id="stockCodeSearch" name="stockCodeSearch" list="stockSearch" class="form-control input-lg inputSearch" placeholder="Stock Name/Code" onkeyup="searchController.getStockHints()" onfocus="searchController.searchOnFocus()" onblur="searchController.searchOnBlur()">
+								<span id="searchBoxIcon" class="input-group-addon"><i class="fa fa-search"></i></span>
+								<span id="searchBoxClear" style="display: none;" class="input-group-addon hidden-xs" onclick="searchController.clearSearch()"><i class="fa fa-times fa-lg"></i></span>
+
+						</div>
+					</div>
+
+
+					<div id="search_hints_placeholder"></div>
+					<script id="search_hints_template" type="text/html">
+
+                                <div class="searchautoSelect">
+                                  <!--  <div class="closeSearch"><i class="fa fa-times-circle" aria-hidden="true" onclick="searchController.hideSearchHints()"></i></div>-->
+                                    <table class="table">
+                                         <tbody>
+											{{#searchResults}}
+											<tr>
+												<td><a href="" onclick="searchController.changeSymbol('{{&symbol}}',event)">{{symbol}}</a></td>
+												<td><a href="" onclick="searchController.changeSymbol('{{&symbol}}',
+												event)">{{name}}</a></td>
+												<td><a href="" onclick="searchController.changeSymbol('{{&symbol}}',
+												event)">{{exchange}}</a></td>
+											</tr>
+											{{/searchResults}}
+                   						 </tbody>
+                                    </table>
+                                </div>
+                     </script>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+<div id="market_condition_palceholder">
+		   <div class="block market-condition">
+            <div class="card-market-condition mktIpad">
+			 <div class="mktHeader">MARKET PULSE</div>
+               <div class="row">
+                  <div class="col-50 leftblock">
+                       
+                        <div class="center hidden-bigDevice mktStatusMob">CONFIRMED UPTREND</div>
+                        <div class="row trendRow">
+                           <div class="col-20">
+                              <div class="trendDiv uptrend hidden-mob">
+                                 <img class="lozad fade" data-class="lozad" data-src="./img/newIcons/uptrend.svg" src="file:///C:/Users/Bhavesh/Desktop/img/newIcons/uptrend.svg" data-loaded="true">
+                              </div>
+                              <div class="hidden-bigDevice trendMobIcon">
+                                 <img class="lozad" data-class="lozad" data-src="./img/newIcons/uptrendMob.svg">
+                              </div>
+                           </div>
+                           <div class="col-80">
+                              <div class="center mktStatus hidden-mob">CONFIRMED UPTREND</div>
+                              <p class="mktParaText">Key indices continue to display strength while broader market showing signs of recovery. Keep buying decisions restricted to stocks with exceptional fundamentals and technical strength.</p>
+                           </div>
+                           <div class="viewHistory"><a onclick="landingController.navigateToUrl(&#39;../marketConditionHistory.jsp&#39;);">View History</a></div>
+                        </div>
+                  </div>
+                  <div class="col-50 rightblock">
+                     <table id="todaysMktTable" class="todaysMkt">
+                        <thead>
+                           <tr>
+                              <th>Index</th>
+                              <th>Price</th>
+                              <th>Price Change</th>
+                              <th>Price % Change</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           
+                           <tr>
+                              <td><a href="file:///C:/Users/Bhavesh/Desktop/chart.html" onclick="landingController.navigateToUrl(&#39;https://marketsmithindia.com/mstool/evaluation.jsp#/symbol/0INNSE50&#39;)">Nifty 50</a></td>
+                              <td>10,244.40</td>
+                              <td class="textGreen">152.75<img class="lozad fade" data-src="./img/newIcons/greenarrowup.svg" src="file:///C:/Users/Bhavesh/Desktop/img/newIcons/greenarrowup.svg" data-loaded="true"></td>
+                              <td class="textGreen">1.51%<img class="lozad fade" data-src="./img/newIcons/greenarrowup.svg" src="file:///C:/Users/Bhavesh/Desktop/img/newIcons/greenarrowup.svg" data-loaded="true"></td>
+                           </tr>
+                           
+                           <tr>
+                              <td><a href="file:///C:/Users/Bhavesh/Desktop/chart.html" onclick="landingController.navigateToUrl(&#39;https://marketsmithindia.com/mstool/evaluation.jsp#/symbol/NIFTYMID50&#39;)">Nifty Mid Cap 50</a></td>
+                              <td>4,088.15</td>
+                              <td class="textGreen">52.55<img class="lozad fade" data-src="./img/newIcons/greenarrowup.svg" src="file:///C:/Users/Bhavesh/Desktop/img/newIcons/greenarrowup.svg" data-loaded="true"></td>
+                              <td class="textGreen">1.30%<img class="lozad fade" data-src="./img/newIcons/greenarrowup.svg" src="file:///C:/Users/Bhavesh/Desktop/img/newIcons/greenarrowup.svg" data-loaded="true"></td>
+                           </tr>
+                           
+                        </tbody>
+                     </table>
+                     <a id="todaysMktPlus" class="viewAll" onclick="landingController.todaysMktTableToggle(event,true,&#39;2&#39;)" href="file:///C:/Users/Bhavesh/Desktop/chart.html" style="display: none">View All</a>
+                   
+                     <a id="todaysMktMinus" class="viewAll" onclick="landingController.todaysMktTableToggle(event,false,&#39;2&#39;)" href="file:///C:/Users/Bhavesh/Desktop/chart.html" style="display: none">View Less</a>
+                  </div>
+               </div>
+            </div>
+		   </div>
+		</div>
+<div id="stom-card" class="card-stockOnTheMove">
+            <div class="hidden-mob">
+               <div>
+                  <div class="mktHeader">STOCKS ON THE MOVE <img class="stom-iTag open-upPriceInfo lozad fade" data-src="img/info-icon.svg" src="file:///C:/Users/Bhavesh/Desktop/img/info-icon.svg" data-loaded="true"></div>
+
+                  <!-- <span>
+                     <a href="#" data-popup=".popup-about" class="open-popup">
+                        <img class="expandIcon lozad" data-src="./img/newIcons/expand-icon.svg">
+                     </a>
+                  </span>-->
+                  <div class="popover popover-stocksMoveDesk">
+                     <div class="popover-angle"></div>
+                        <div class="popover-inner">
+                        <div class="content-block stocksMoveContent">
+                           <h4 class="stocksMoveHeading">STOCKS ON THE MOVE</h4>
+                           <span>Important daily list in MarketSmith India that highlights stocks that had the greatest percentage increase in volume above their normal past daily trading level. Usually a sign that institutions are buying or selling stock.</span><br><br>
+                           <span><b style="color:#0E6833;">Up In Price: </b> Top stocks which are being BOUGHT heavily by institutional investors. EPS &amp; RS Rank must be a minimum of 70 and A/D Rating must be D+ or better. Stocks must have daily price change of 1/2 point or more with a volume change of 1/2 point or more as compared to 50 day average volume.</span><br><br>
+                           <span><b style="color:#ca1e1f;">Down In Price: </b> Top stocks which are being SOLD heavily by institutional investors. Stocks must have daily price change of -1/2 point or more with a volume change of 1/2 point or more as compared to 50 day average volume.</span>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+            <div class="hidden-bigDevice">
+               <h3 class="card-title">STOCKS ON THE MOVE <img class="stom-iTag open-upPriceInfo lozad" data-src="img/info-icon.svg">
+                  <!-- <span>
+                     <a href="#" data-popup=".popup-about" class="open-popup">
+                        <img class="expandIcon lozad" data-src="./img/newIcons/expand-icon.svg">
+                     </a>
+                  </span> -->
+               </h3>
+
+               <div class="popover popover-stocksMove">
+                  <div class="popover-angle"></div>
+                     <div class="popover-inner">
+                        <div class="content-block stocksMoveContent">
+                           <h4 class="stocksMoveHeading">STOCKS ON THE MOVE</h4>
+                           <p>Important daily list in MarketSmith India that highlights stocks that had the greatest percentage increase in volume above their normal past daily trading level. Usually a sign that institutions are buying or selling stock.</p>
+                           <p><b style="color:#0E6833;">Up In Price: </b> Top stocks which are being BOUGHT heavily by institutional investors. EPS &amp; RS Rank must be a minimum of 70 and A/D Rating must be D+ or better. Stocks must have daily price change of 1/2 point or more with a volume change of 1/2 point or more as compared to 50 day average volume.</p>
+                           <p><b style="color:#ca1e1f;">Down In Price: </b> Top stocks which are being SOLD heavily by institutional investors. Stocks must have daily price change of -1/2 point or more with a volume change of 1/2 point or more as compared to 50 day average volume.</p>
+                        </div>
+                  </div>
+               </div>
+            </div>
+
+            <div class="stockListBtns">
+               <span><button onclick="landingController.displayStockMoveList(&#39;up&#39;);" class="upInPrice" style="background-color: rgb(98, 163, 98); border: rgb(98, 163, 98); color: rgb(255, 255, 255);">
+                  <img class="lozad fade" data-src="./img/newIcons/greenarrowup.svg" src="file:///C:/Users/Bhavesh/Desktop/img/newIcons/greenarrowup.svg" data-loaded="true">
+               Up In Price</button></span>
+
+               <span><button onclick="landingController.displayStockMoveList(&#39;down&#39;);" class="downInPrice">
+                  <img class="lozad fade" data-src="./img/newIcons/redarrowdown.svg" src="file:///C:/Users/Bhavesh/Desktop/img/newIcons/redarrowdown.svg" data-loaded="true">
+               Down In Price</button></span>
+            </div>
+
+            <div id="upOnPriceTable">
+               <div class="scroll-wrapper">
+                  <div class="scroll-stockTable">
+                     <div id="stockOnTheMoveTable_wrapper" class="dataTables_wrapper no-footer"><div class="dataTables_length" id="stockOnTheMoveTable_length"><label>Show <select name="stockOnTheMoveTable_length" aria-controls="stockOnTheMoveTable" class=""><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> entries</label></div><table class="stockOnTheMove dataTable no-footer" id="stockOnTheMoveTable" cellpadding="0" cellspacing="0" role="grid">
+                        <thead>
+                           <tr role="row"><th class="col_1 sticky-col sorting" tabindex="0" aria-controls="stockOnTheMoveTable" rowspan="1" colspan="1" aria-label="Company: activate to sort column ascending" style="width: 227.2px;">Company</th><th class="col_2 sorting" tabindex="0" aria-controls="stockOnTheMoveTable" rowspan="1" colspan="1" aria-label="Price: activate to sort column ascending" style="width: 91.2px;">Price</th><th class="col_3 sorting" tabindex="0" aria-controls="stockOnTheMoveTable" rowspan="1" colspan="1" aria-label="Price Change: activate to sort column ascending" style="width: 103.2px;">Price Change</th><th class="col_4 sorting" tabindex="0" aria-controls="stockOnTheMoveTable" rowspan="1" colspan="1" aria-label="Price % Change: activate to sort column ascending" style="width: 121.6px;">Price % Change</th><th class="col_5 sorting_desc" tabindex="0" aria-controls="stockOnTheMoveTable" rowspan="1" colspan="1" aria-sort="descending" aria-label="Vol % Change: activate to sort column ascending" style="width: 106.4px;">Vol % Change</th><th class="col_6 sorting" tabindex="0" aria-controls="stockOnTheMoveTable" rowspan="1" colspan="1" aria-label="Master Score: activate to sort column ascending" style="width: 100.8px;">Master Score</th><th class="col_7 sorting" tabindex="0" aria-controls="stockOnTheMoveTable" rowspan="1" colspan="1" aria-label="EPS Strength: activate to sort column ascending" style="width: 102.4px;">EPS Strength</th><th class="col_8 sorting" tabindex="0" aria-controls="stockOnTheMoveTable" rowspan="1" colspan="1" aria-label="Price Strength: activate to sort column ascending" style="width: 106.4px;">Price Strength</th><th class="col_9 sorting" tabindex="0" aria-controls="stockOnTheMoveTable" rowspan="1" colspan="1" aria-label="Buyer Demand: activate to sort column ascending" style="width: 112px;">Buyer Demand</th><th class="col_10 sorting" tabindex="0" aria-controls="stockOnTheMoveTable" rowspan="1" colspan="1" aria-label="Group Rank: activate to sort column ascending" style="width: 91.2px;">Group Rank</th></tr>
+                        </thead>
+                        <tbody>
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                        <tr role="row" class="odd">
+                              <td class="col_1 sticky-col"><a href="file:///C:/Users/Bhavesh/evaluation.jsp#/viewList/symbol/RUCHI" onclick="landingController.orderSequenceMarketMover(true,&#39;RUCHI&#39;);">Ruchi Soya Inds.</a></td>
+                              <td class="col_2" data-order="1190.8">1,190.80</td>
+                              <td class="col_3" style="color:#0E6833;" data-order="56.7">56.70</td>
+                              <td class="col_4" style="color:#0E6833;">5.00%</td>
+                              <td class="col_5 sorting_1" data-order="1228.00">1228.00%</td>
+                              <td class="col_6">59</td>
+                              <td class="col_7">71</td>
+                              <td class="col_8">99</td>
+                              <td class="col_9" data-order="20">A+</td>
+                              <td class="col_10">27</td>
+                           </tr><tr role="row" class="even">
+                              <td class="col_1 sticky-col"><a href="file:///C:/Users/Bhavesh/evaluation.jsp#/viewList/symbol/TINPLATE" onclick="landingController.orderSequenceMarketMover(true,&#39;TINPLATE&#39;);">Tin Plate Co.</a></td>
+                              <td class="col_2" data-order="125.1">125.10</td>
+                              <td class="col_3" style="color:#0E6833;" data-order="9.6">9.60</td>
+                              <td class="col_4" style="color:#0E6833;">8.31%</td>
+                              <td class="col_5 sorting_1" data-order="799.00">799.00%</td>
+                              <td class="col_6">71</td>
+                              <td class="col_7">92</td>
+                              <td class="col_8">82</td>
+                              <td class="col_9" data-order="19">A</td>
+                              <td class="col_10">109</td>
+                           </tr><tr role="row" class="odd">
+                              <td class="col_1 sticky-col"><a href="file:///C:/Users/Bhavesh/evaluation.jsp#/viewList/symbol/JSLHISAR" onclick="landingController.orderSequenceMarketMover(true,&#39;JSLHISAR&#39;);">Jindal Stainless (Hi</a></td>
+                              <td class="col_2" data-order="65.85">65.85</td>
+                              <td class="col_3" style="color:#0E6833;" data-order="4">4.00</td>
+                              <td class="col_4" style="color:#0E6833;">6.47%</td>
+                              <td class="col_5 sorting_1" data-order="544.00">544.00%</td>
+                              <td class="col_6">58</td>
+                              <td class="col_7">88</td>
+                              <td class="col_8">80</td>
+                              <td class="col_9" data-order="20">A+</td>
+                              <td class="col_10">109</td>
+                           </tr><tr role="row" class="even">
+                              <td class="col_1 sticky-col"><a href="file:///C:/Users/Bhavesh/evaluation.jsp#/viewList/symbol/MUTHOOTFIN" onclick="landingController.orderSequenceMarketMover(true,&#39;MUTHOOTFIN&#39;);">Muthoot Finance</a></td>
+                              <td class="col_2" data-order="1182">1,182.00</td>
+                              <td class="col_3" style="color:#0E6833;" data-order="6.2">6.20</td>
+                              <td class="col_4" style="color:#0E6833;">0.53%</td>
+                              <td class="col_5 sorting_1" data-order="504.00">504.00%</td>
+                              <td class="col_6">81</td>
+                              <td class="col_7">98</td>
+                              <td class="col_8">96</td>
+                              <td class="col_9" data-order="19">A</td>
+                              <td class="col_10">142</td>
+                           </tr><tr role="row" class="odd">
+                              <td class="col_1 sticky-col"><a href="file:///C:/Users/Bhavesh/evaluation.jsp#/viewList/symbol/ESSELPACK" onclick="landingController.orderSequenceMarketMover(true,&#39;ESSELPACK&#39;);">Essel Propack Ltd.</a></td>
+                              <td class="col_2" data-order="193.95">193.95</td>
+                              <td class="col_3" style="color:#0E6833;" data-order="13.55">13.55</td>
+                              <td class="col_4" style="color:#0E6833;">7.51%</td>
+                              <td class="col_5 sorting_1" data-order="377.00">377.00%</td>
+                              <td class="col_6">62</td>
+                              <td class="col_7">73</td>
+                              <td class="col_8">87</td>
+                              <td class="col_9" data-order="17">B+</td>
+                              <td class="col_10">43</td>
+                           </tr><tr role="row" class="even">
+                              <td class="col_1 sticky-col"><a href="file:///C:/Users/Bhavesh/evaluation.jsp#/viewList/symbol/DMART" onclick="landingController.orderSequenceMarketMover(true,&#39;DMART&#39;);">Avenue Supermarts</a></td>
+                              <td class="col_2" data-order="2372">2,372.00</td>
+                              <td class="col_3" style="color:#0E6833;" data-order="21.15">21.15</td>
+                              <td class="col_4" style="color:#0E6833;">0.90%</td>
+                              <td class="col_5 sorting_1" data-order="220.00">220.00%</td>
+                              <td class="col_6">73</td>
+                              <td class="col_7">98</td>
+                              <td class="col_8">86</td>
+                              <td class="col_9" data-order="14">C+</td>
+                              <td class="col_10">38</td>
+                           </tr><tr role="row" class="odd">
+                              <td class="col_1 sticky-col"><a href="file:///C:/Users/Bhavesh/evaluation.jsp#/viewList/symbol/JKCEMENT" onclick="landingController.orderSequenceMarketMover(true,&#39;JKCEMENT&#39;);">Jk Cement</a></td>
+                              <td class="col_2" data-order="1385">1,385.00</td>
+                              <td class="col_3" style="color:#0E6833;" data-order="139.3">139.30</td>
+                              <td class="col_4" style="color:#0E6833;">11.18%</td>
+                              <td class="col_5 sorting_1" data-order="205.00">205.00%</td>
+                              <td class="col_6">74</td>
+                              <td class="col_7">97</td>
+                              <td class="col_8">85</td>
+                              <td class="col_9" data-order="19">A</td>
+                              <td class="col_10">49</td>
+                           </tr></tbody>
+                     </table><div class="dataTables_paginate paging_simple_numbers" id="stockOnTheMoveTable_paginate"><a class="paginate_button previous disabled" aria-controls="stockOnTheMoveTable" data-dt-idx="0" tabindex="0" id="stockOnTheMoveTable_previous">Previous</a><span><a class="paginate_button current" aria-controls="stockOnTheMoveTable" data-dt-idx="1" tabindex="0">1</a><a class="paginate_button " aria-controls="stockOnTheMoveTable" data-dt-idx="2" tabindex="0">2</a><a class="paginate_button " aria-controls="stockOnTheMoveTable" data-dt-idx="3" tabindex="0">3</a><a class="paginate_button " aria-controls="stockOnTheMoveTable" data-dt-idx="4" tabindex="0">4</a><a class="paginate_button " aria-controls="stockOnTheMoveTable" data-dt-idx="5" tabindex="0">5</a></span><a class="paginate_button next" aria-controls="stockOnTheMoveTable" data-dt-idx="6" tabindex="0" id="stockOnTheMoveTable_next">Next</a></div></div> 
+                  </div>
+               </div>
+               <!-- <a id="stockOnTheMovePlus" class="viewAll" onclick="landingController.stockOnTheMoveTableToggle(event,true,'31')" href="" style="display: none">View All</a>
+                      
+               <a id="stockOnTheMoveMinus" class="viewAll" onclick="landingController.stockOnTheMoveTableToggle(event,false,'31')" href="" style="display: none">View Less</a> -->
+            </div>
+
+            <div id="downOnPriceTable" style="display:none;">
+               <div class="scroll-wrapper">
+                  <div class="scroll-stockTable">
+                     <div id="stockOnTheMoveTable_Down_wrapper" class="dataTables_wrapper no-footer"><div class="dataTables_length" id="stockOnTheMoveTable_Down_length"><label>Show <select name="stockOnTheMoveTable_Down_length" aria-controls="stockOnTheMoveTable_Down" class=""><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> entries</label></div><table class="stockOnTheMove dataTable no-footer" id="stockOnTheMoveTable_Down" cellpadding="0" cellspacing="0" role="grid">
+                        <thead>
+                           <tr role="row"><th class="downcol_1 sticky-col sorting" tabindex="0" aria-controls="stockOnTheMoveTable_Down" rowspan="1" colspan="1" aria-label="Company: activate to sort column ascending" style="width: 0px;">Company</th><th class="downcol_2 sorting" tabindex="0" aria-controls="stockOnTheMoveTable_Down" rowspan="1" colspan="1" aria-label="Price: activate to sort column ascending" style="width: 0px;">Price</th><th class="downcol_3 sorting" tabindex="0" aria-controls="stockOnTheMoveTable_Down" rowspan="1" colspan="1" aria-label="Price Change: activate to sort column ascending" style="width: 0px;">Price Change</th><th class="downcol_4 sorting" tabindex="0" aria-controls="stockOnTheMoveTable_Down" rowspan="1" colspan="1" aria-label="Price % Change: activate to sort column ascending" style="width: 0px;">Price % Change</th><th class="downcol_5 sorting_desc" tabindex="0" aria-controls="stockOnTheMoveTable_Down" rowspan="1" colspan="1" aria-sort="descending" aria-label="Vol % Change: activate to sort column ascending" style="width: 0px;">Vol % Change</th><th class="downcol_6 sorting" tabindex="0" aria-controls="stockOnTheMoveTable_Down" rowspan="1" colspan="1" aria-label="Master Score: activate to sort column ascending" style="width: 0px;">Master Score</th><th class="downcol_7 sorting" tabindex="0" aria-controls="stockOnTheMoveTable_Down" rowspan="1" colspan="1" aria-label="EPS Strength: activate to sort column ascending" style="width: 0px;">EPS Strength</th><th class="downcol_8 sorting" tabindex="0" aria-controls="stockOnTheMoveTable_Down" rowspan="1" colspan="1" aria-label="Price Strength: activate to sort column ascending" style="width: 0px;">Price Strength</th><th class="downcol_9 sorting" tabindex="0" aria-controls="stockOnTheMoveTable_Down" rowspan="1" colspan="1" aria-label="Buyer Demand: activate to sort column ascending" style="width: 0px;">Buyer Demand</th><th class="downcol_10 sorting" tabindex="0" aria-controls="stockOnTheMoveTable_Down" rowspan="1" colspan="1" aria-label="Group Rank: activate to sort column ascending" style="width: 0px;">Group Rank</th></tr>
+                        </thead>
+                        <tbody>
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                        <tr role="row" class="odd">
+                              <td class="downcol_1 sticky-col"><a href="file:///C:/Users/Bhavesh/evaluation.jsp#/viewList/symbol/BAJAJCON" onclick="landingController.orderSequenceMarketMover(false,&#39;BAJAJCON&#39;);">Bajaj Consumer Care</a></td>
+                              <td class="downcol_2" data-order="150.1">150.10</td>
+                              <td class="downcol_3" data-order="2.2" style="color:#ca1e1f;">2.20</td>
+                              <td class="downcol_4" style="color:#ca1e1f;">1.44% </td>
+                              <td class="downcol_5 sorting_1">670.00%</td>
+                              <td class="downcol_6">45</td>
+                              <td class="downcol_7">64</td>
+                              <td class="downcol_8">13</td>
+                              <td class="downcol_9" data-order="12">C-</td>
+                              <td class="downcol_10">72</td>
+                           </tr><tr role="row" class="even">
+                              <td class="downcol_1 sticky-col"><a href="file:///C:/Users/Bhavesh/evaluation.jsp#/viewList/symbol/538566" onclick="landingController.orderSequenceMarketMover(false,&#39;538566&#39;);">Apollo Tricoat Tubes</a></td>
+                              <td class="downcol_2" data-order="372.9">372.90</td>
+                              <td class="downcol_3" data-order="5.2" style="color:#ca1e1f;">5.20</td>
+                              <td class="downcol_4" style="color:#ca1e1f;">1.38% </td>
+                              <td class="downcol_5 sorting_1">609.00%</td>
+                              <td class="downcol_6">77</td>
+                              <td class="downcol_7">99</td>
+                              <td class="downcol_8">92</td>
+                              <td class="downcol_9" data-order="18">A-</td>
+                              <td class="downcol_10">20</td>
+                           </tr><tr role="row" class="odd">
+                              <td class="downcol_1 sticky-col"><a href="file:///C:/Users/Bhavesh/evaluation.jsp#/viewList/symbol/CUB" onclick="landingController.orderSequenceMarketMover(false,&#39;CUB&#39;);">City Union Bank</a></td>
+                              <td class="downcol_2" data-order="127.45">127.45</td>
+                              <td class="downcol_3" data-order="9.35" style="color:#ca1e1f;">9.35</td>
+                              <td class="downcol_4" style="color:#ca1e1f;">6.83% </td>
+                              <td class="downcol_5 sorting_1">475.00%</td>
+                              <td class="downcol_6">42</td>
+                              <td class="downcol_7">86</td>
+                              <td class="downcol_8">7</td>
+                              <td class="downcol_9" data-order="14">C+</td>
+                              <td class="downcol_10">148</td>
+                           </tr><tr role="row" class="even">
+                              <td class="downcol_1 sticky-col"><a href="file:///C:/Users/Bhavesh/evaluation.jsp#/viewList/symbol/DHANUKA" onclick="landingController.orderSequenceMarketMover(false,&#39;DHANUKA&#39;);">Dhanuka Agritech Ltd</a></td>
+                              <td class="downcol_2" data-order="725">725.00</td>
+                              <td class="downcol_3" data-order="55.15" style="color:#ca1e1f;">55.15</td>
+                              <td class="downcol_4" style="color:#ca1e1f;">7.07% </td>
+                              <td class="downcol_5 sorting_1">424.00%</td>
+                              <td class="downcol_6">82</td>
+                              <td class="downcol_7">84</td>
+                              <td class="downcol_8">97</td>
+                              <td class="downcol_9" data-order="20">A+</td>
+                              <td class="downcol_10">31</td>
+                           </tr><tr role="row" class="odd">
+                              <td class="downcol_1 sticky-col"><a href="file:///C:/Users/Bhavesh/evaluation.jsp#/viewList/symbol/ITI" onclick="landingController.orderSequenceMarketMover(false,&#39;ITI&#39;);">Iti</a></td>
+                              <td class="downcol_2" data-order="106.2">106.20</td>
+                              <td class="downcol_3" data-order="2.4" style="color:#ca1e1f;">2.40</td>
+                              <td class="downcol_4" style="color:#ca1e1f;">2.21% </td>
+                              <td class="downcol_5 sorting_1">396.00%</td>
+                              <td class="downcol_6">66</td>
+                              <td class="downcol_7">74</td>
+                              <td class="downcol_8">91</td>
+                              <td class="downcol_9" data-order="20">A+</td>
+                              <td class="downcol_10">26</td>
+                           </tr><tr role="row" class="even">
+                              <td class="downcol_1 sticky-col"><a href="file:///C:/Users/Bhavesh/evaluation.jsp#/viewList/symbol/GILLETTE" onclick="landingController.orderSequenceMarketMover(false,&#39;GILLETTE&#39;);">Gillette India Ltd.</a></td>
+                              <td class="downcol_2" data-order="4823">4,823.00</td>
+                              <td class="downcol_3" data-order="83" style="color:#ca1e1f;">83.00</td>
+                              <td class="downcol_4" style="color:#ca1e1f;">1.69% </td>
+                              <td class="downcol_5 sorting_1">372.00%</td>
+                              <td class="downcol_6">36</td>
+                              <td class="downcol_7">64</td>
+                              <td class="downcol_8">18</td>
+                              <td class="downcol_9" data-order="9">D-</td>
+                              <td class="downcol_10">72</td>
+                           </tr><tr role="row" class="odd">
+                              <td class="downcol_1 sticky-col"><a href="file:///C:/Users/Bhavesh/evaluation.jsp#/viewList/symbol/SUMICHEM" onclick="landingController.orderSequenceMarketMover(false,&#39;SUMICHEM&#39;);">Sumitomo Chemical</a></td>
+                              <td class="downcol_2" data-order="287.1">287.10</td>
+                              <td class="downcol_3" data-order="15.75" style="color:#ca1e1f;">15.75</td>
+                              <td class="downcol_4" style="color:#ca1e1f;">5.20% </td>
+                              <td class="downcol_5 sorting_1">312.00%</td>
+                              <td class="downcol_6">54</td>
+                              <td class="downcol_7">13</td>
+                              <td class="downcol_8">90</td>
+                              <td class="downcol_9" data-order="20">A+</td>
+                              <td class="downcol_10">31</td>
+                           </tr></tbody>
+                     </table><div class="dataTables_paginate paging_simple_numbers" id="stockOnTheMoveTable_Down_paginate"><a class="paginate_button previous disabled" aria-controls="stockOnTheMoveTable_Down" data-dt-idx="0" tabindex="0" id="stockOnTheMoveTable_Down_previous">Previous</a><span><a class="paginate_button current" aria-controls="stockOnTheMoveTable_Down" data-dt-idx="1" tabindex="0">1</a><a class="paginate_button " aria-controls="stockOnTheMoveTable_Down" data-dt-idx="2" tabindex="0">2</a><a class="paginate_button " aria-controls="stockOnTheMoveTable_Down" data-dt-idx="3" tabindex="0">3</a><a class="paginate_button " aria-controls="stockOnTheMoveTable_Down" data-dt-idx="4" tabindex="0">4</a><a class="paginate_button " aria-controls="stockOnTheMoveTable_Down" data-dt-idx="5" tabindex="0">5</a><span class="ellipsis">…</span><a class="paginate_button " aria-controls="stockOnTheMoveTable_Down" data-dt-idx="6" tabindex="0">10</a></span><a class="paginate_button next" aria-controls="stockOnTheMoveTable_Down" data-dt-idx="7" tabindex="0" id="stockOnTheMoveTable_Down_next">Next</a></div></div>
+                  </div>
+               </div> 
+               <!-- <a id="stockOnTheMovePlus_Down" class="viewAll" onclick="landingController.stockOnTheMoveTableDownToggle(event,true,'70')" href="" style="display: none">View All</a>
+                      
+               <a id="stockOnTheMoveMinus_Down" class="viewAll" onclick="landingController.stockOnTheMoveTableDownToggle(event,false,'70')" href="" style="display: none">View Less</a> -->
+            </div>
+
+            <!-- Services Popup -->
+            <div class="popup popup-about stocksPopUp">
+               <div class="content-block">
+                  <p><a href="file:///C:/Users/Bhavesh/Desktop/chart.html#" class="close-popup">x</a></p>
+
+                  <div class="row stocksPopUpRow">
+                     <div class="col-33 popUpMenu">
+                        <div class="row">
+                           <div class="col-25">
+                              <img class="lozad" data-src="./img/newIcons/Stocks_on_the_Move.svg">
+                           </div>
+                           <div class="col-75 stockText">
+                              Stocks On The Move
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="col-33 popUpMenu">
+                        <div class="row">
+                           <div class="col-25">
+                              <img class="lozad" data-src="./img/newIcons/MSI_Growth50.svg">
+                           </div>
+                           <div class="col-75 stockText">
+                              MSI Growth50
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="col-33 popUpMenu">
+                        <div class="row">
+                           <div class="col-25">
+                              <img class="lozad" data-src="./img/newIcons/MSI_Big_Cap_20.svg">
+                           </div>
+                           <div class="col-75 stockText">
+                              MSI Big Cap 20
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="row stocksPopUpRow">
+                     <div class="col-33 popUpMenu">
+                        <div class="row">
+                           <div class="col-25">
+                              <img class="lozad" data-src="./img/newIcons/Top_Stocks_in_Top_Industries.svg">
+                           </div>
+                           <div class="col-75 stockText">
+                              Top Stocks In Top Industries
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="col-33 popUpMenu">
+                        <div class="row">
+                           <div class="col-25">
+                              <img class="lozad" data-src="./img/newIcons/Top_Performing_IPO�s.svg">
+                           </div>
+                           <div class="col-75 stockText">
+                              Top Performing IPO's
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="col-33 popUpMenu">
+                        <div class="row">
+                           <div class="col-25">
+                              <img class="lozad" data-src="./img/newIcons/Stocks_that_Funds_are_Buying.svg">
+                           </div>
+                           <div class="col-75 stockText">
+                              Stocks That Funds Are Buying
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="row stocksPopUpRow">
+                     <div class="col-33 popUpMenu">
+                        <div class="row">
+                           <div class="col-25">
+                              <img class="lozad" data-src="./img/newIcons/EPS_and_Relative_Strength.svg">
+                           </div>
+                           <div class="col-75 stockText">
+                              Highest EPS And Relative Strength
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="col-33 popUpMenu">
+                        <div class="row">
+                           <div class="col-25">
+                              <img class="lozad" data-src="./img/newIcons/New_High_with_Best_EPS_Rank.svg">
+                           </div>
+                           <div class="col-75 stockText">
+                              New High With Best EPS Rank
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="col-33 popUpMenu">
+                        <div class="row">
+                           <div class="col-25">
+                              <img class="lozad" data-src="./img/newIcons/CAN_SLIM.svg">
+                           </div>
+                           <div class="col-75 stockText">
+                              CAN SLIM
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+           </div>
+         </div>
+<div id="earning_events_palceholder">
+         <div class="card-earning_events hidden-xs">
+            <div class="earning_events-container swiper-container-horizontal">
+               <div class="earning_events-pagination swiper-pagination swiper-pagination-clickable swiper-pagination-bullets"><span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span></div>
+               <div class="swiper-wrapper">
+                  <div class="swiper-slide swiper-slide-active" style="width: 699.5px; margin-right: 20px;">
+                     <span class="calendar-span">
+                        <div>
+                           <span class=""><h3 class="card-title">Upcoming Earnings Report</h3></span>
+                           <span class="infoOfEarning open-popover" data-popover=".popover-earning">
+                           <img class="portfolio-iTag lozad fade" data-src="img/info-icon.svg" src="file:///C:/Users/Bhavesh/Desktop/img/info-icon.svg" data-loaded="true"></span>
+                        </div>
+                     
+                        <div class="popover popover-earning">
+                           <div class="popover-angle on-top"></div>
+                           <div class="popover-inner">
+                              <div class="content-block">
+                                 <p>This is a list of stocks with highest market cap that will be reporting earnings in the coming weeks.</p>
+                              </div>
+                           </div>
+                        </div>
+
+                        <div id="earningTable_wrapper" class="dataTables_wrapper no-footer"><div class="dataTables_length" id="earningTable_length"><label>Show <select name="earningTable_length" aria-controls="earningTable" class=""><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> entries</label></div><table id="earningTable" class="earningTable dataTable no-footer" cellpadding="0" cellspacing="0" role="grid">
+                           <thead>
+                                 <tr role="row"><th class="sorting" tabindex="0" aria-controls="earningTable" rowspan="1" colspan="1" aria-label="Company: activate to sort column ascending" style="width: 385.6px;">Company</th><th class="sorting_asc" tabindex="0" aria-controls="earningTable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Earning Due Date: activate to sort column descending" style="width: 385.6px;">Earning Due Date</th><th class="sorting" tabindex="0" aria-controls="earningTable" rowspan="1" colspan="1" aria-label="Industry Name: activate to sort column ascending" style="width: 556px;">Industry Name</th></tr>
+                           </thead>
+                           <tbody>
+                              
+                                 
+                              
+                                 
+                              
+                                 
+                              
+                                 
+                              
+                                 
+                              
+                                 
+                              
+                                 
+                              
+                                 
+                              
+                                 
+                              
+                                 
+                              
+                                 
+                              
+                                 
+                              
+                                 
+                              
+                                 
+                              
+                                 
+                              
+                                 
+                              
+                                 
+                              
+                                 
+                              
+                                 
+                              
+                                 
+                              
+                                 
+                              
+                                 
+                              
+                                 
+                              
+                                 
+                              
+                                 
+                              
+                                 
+                              
+                                 
+                              
+                                 
+                              
+                                 
+                              
+                                 
+                              
+                                 
+                              
+                                 
+                              
+                                 
+                              
+                                 
+                              
+                                 
+                              
+                                 
+                              
+                                 
+                              
+                                 
+                              
+                                 
+                              
+                                 
+                              
+                                 
+                              
+                                 
+                              
+                                 
+                              
+                                 
+                              
+                                 
+                              
+                                 
+                              
+                                 
+                              
+                                 
+                              
+                                 
+                              
+                                 
+                              
+                                 
+                              
+                                 
+                              
+                                 
+                              
+                                 
+                              
+                                 
+                              
+                                 
+                              
+                                 
+                              
+                                 
+                              
+                                 
+                              
+                                 
+                              
+                                 
+                              
+                                 
+                              
+                                 
+                              
+                                 
+                              
+                                 
+                              
+                                 
+                              
+                           <tr role="row" class="odd">
+                                    <td><a onclick="landingController.navigationListEarningReport(&#39;APOLLOHOSP&#39;);">Apollo Hosps.Enterprise</a></td>
+                                    <!-- <td></td> -->
+                                    <td data-order="2020-06-22" class="sorting_1">22-06-2020</td>
+                                    <td>Medical-Hospitals</td>
+                                    <!-- <td>133.9</td>
+                                    <td>1.25</td>
+                                    <td>88</td> -->
+                                 </tr><tr role="row" class="even">
+                                    <td><a onclick="landingController.navigationListEarningReport(&#39;JTEKTINDIA&#39;);">Jtekt India</a></td>
+                                    <!-- <td></td> -->
+                                    <td data-order="2020-06-22" class="sorting_1">22-06-2020</td>
+                                    <td>Auto/Truck-Original Eqp</td>
+                                    <!-- <td>133.9</td>
+                                    <td>1.25</td>
+                                    <td>88</td> -->
+                                 </tr><tr role="row" class="odd">
+                                    <td><a onclick="landingController.navigationListEarningReport(&#39;HBLPOWER&#39;);">Hbl Power Systems</a></td>
+                                    <!-- <td></td> -->
+                                    <td data-order="2020-06-22" class="sorting_1">22-06-2020</td>
+                                    <td>Electrical-Power/Equipmt</td>
+                                    <!-- <td>133.9</td>
+                                    <td>1.25</td>
+                                    <td>88</td> -->
+                                 </tr><tr role="row" class="even">
+                                    <td><a onclick="landingController.navigationListEarningReport(&#39;AIAENG&#39;);">Aia Engineering</a></td>
+                                    <!-- <td></td> -->
+                                    <td data-order="2020-06-22" class="sorting_1">22-06-2020</td>
+                                    <td>Machinery-Gen Industrial</td>
+                                    <!-- <td>133.9</td>
+                                    <td>1.25</td>
+                                    <td>88</td> -->
+                                 </tr><tr role="row" class="odd">
+                                    <td><a onclick="landingController.navigationListEarningReport(&#39;BALAMINES&#39;);">Balaji Amines Limited</a></td>
+                                    <!-- <td></td> -->
+                                    <td data-order="2020-06-22" class="sorting_1">22-06-2020</td>
+                                    <td>Chemicals-Specialty</td>
+                                    <!-- <td>133.9</td>
+                                    <td>1.25</td>
+                                    <td>88</td> -->
+                                 </tr></tbody>
+                        </table><div class="dataTables_paginate paging_simple_numbers" id="earningTable_paginate"><a class="paginate_button previous disabled" aria-controls="earningTable" data-dt-idx="0" tabindex="0" id="earningTable_previous">Previous</a><span><a class="paginate_button current" aria-controls="earningTable" data-dt-idx="1" tabindex="0">1</a><a class="paginate_button " aria-controls="earningTable" data-dt-idx="2" tabindex="0">2</a><a class="paginate_button " aria-controls="earningTable" data-dt-idx="3" tabindex="0">3</a><a class="paginate_button " aria-controls="earningTable" data-dt-idx="4" tabindex="0">4</a><a class="paginate_button " aria-controls="earningTable" data-dt-idx="5" tabindex="0">5</a><span class="ellipsis">…</span><a class="paginate_button " aria-controls="earningTable" data-dt-idx="6" tabindex="0">14</a></span><a class="paginate_button next" aria-controls="earningTable" data-dt-idx="7" tabindex="0" id="earningTable_next">Next</a></div></div>
+                     </span>
+                  </div>
+
+                  <div class="swiper-slide swiper-slide-next" style="width: 699.5px; margin-right: 20px;">
+                     <span class="calendar-span">
+                        <div>
+                           <span><h3 class="card-title">Upcoming Economic Events</h3></span>
+                           <span class="infoOfCalendar open-popover" data-popover=".popover-calendar">
+                           <img class="portfolio-iTag lozad fade" data-src="img/info-icon.svg" src="file:///C:/Users/Bhavesh/Desktop/img/info-icon.svg" data-loaded="true"></span>
+                        </div>
+                     
+                        <div class="popover popover-calendar">
+                           <div class="popover-angle on-top"></div>
+                           <div class="popover-inner">
+                              <div class="content-block">
+                                <p>This is a list of key global economic event for upcoming month.</p>
+                              </div>
+                           </div>
+                        </div>
+
+                        <div id="eventTable_wrapper" class="dataTables_wrapper no-footer"><div class="dataTables_length" id="eventTable_length"><label>Show <select name="eventTable_length" aria-controls="eventTable" class=""><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> entries</label></div><table id="eventTable" class="eventTable dataTable no-footer" cellpadding="0" cellspacing="0" role="grid">
+                           <thead>
+                                 <tr role="row"><th class="sorting_asc" tabindex="0" aria-controls="eventTable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Event Date: activate to sort column descending" style="width: 247.2px;">Event Date</th><th class="sorting" tabindex="0" aria-controls="eventTable" rowspan="1" colspan="1" aria-label="Event Day: activate to sort column ascending" style="width: 232px;">Event Day</th><th class="sorting" tabindex="0" aria-controls="eventTable" rowspan="1" colspan="1" aria-label="Country: activate to sort column ascending" style="width: 185.6px;">Country</th><th class="sorting" tabindex="0" aria-controls="eventTable" rowspan="1" colspan="1" aria-label="Event: activate to sort column ascending" style="width: 638.4px;">Event</th></tr>
+                           </thead>
+                           <tbody>
+                              
+                                 
+                              
+                                 
+                              
+                                 
+                              
+                                 
+                              
+                                 
+                              
+                                 
+                              
+                                 
+                              
+                                 
+                              
+                                 
+                              
+                                 
+                              
+                                 
+                              
+                                 
+                              
+                                 
+                              
+                                 
+                              
+                                 
+                              
+                                 
+                              
+                                 
+                              
+                                 
+                              
+                                 
+                              
+                                 
+                              
+                                 
+                              
+                                 
+                              
+                                 
+                              
+                           <tr role="row" class="odd">
+                                    <td data-order="2020-06-22" class="sorting_1">22-06-2020</td>
+                                    <td>Mon</td>
+                                    <td>China</td>
+                                    <td>Loan Prime Rate 1Y</td>
+                                 </tr><tr role="row" class="even">
+                                    <td data-order="2020-06-22" class="sorting_1">22-06-2020</td>
+                                    <td>Mon</td>
+                                    <td>China</td>
+                                    <td>Loan Prime Rate 5Y JUN</td>
+                                 </tr><tr role="row" class="odd">
+                                    <td data-order="2020-06-25" class="sorting_1">25-06-2020</td>
+                                    <td>Thu</td>
+                                    <td>U.S.</td>
+                                    <td>GDP Growth Rate QoQ Final Q1	</td>
+                                 </tr><tr role="row" class="even">
+                                    <td data-order="2020-06-26" class="sorting_1">26-06-2020</td>
+                                    <td>Fri</td>
+                                    <td>India</td>
+                                    <td>Foreign Exchange Reserves JUN/19</td>
+                                 </tr><tr role="row" class="odd">
+                                    <td data-order="2020-06-30" class="sorting_1">30-06-2020</td>
+                                    <td>Tue</td>
+                                    <td>India</td>
+                                    <td>Government Budget Value MAY	</td>
+                                 </tr></tbody>
+                        </table><div class="dataTables_paginate paging_simple_numbers" id="eventTable_paginate"><a class="paginate_button previous disabled" aria-controls="eventTable" data-dt-idx="0" tabindex="0" id="eventTable_previous">Previous</a><span><a class="paginate_button current" aria-controls="eventTable" data-dt-idx="1" tabindex="0">1</a><a class="paginate_button " aria-controls="eventTable" data-dt-idx="2" tabindex="0">2</a><a class="paginate_button " aria-controls="eventTable" data-dt-idx="3" tabindex="0">3</a><a class="paginate_button " aria-controls="eventTable" data-dt-idx="4" tabindex="0">4</a><a class="paginate_button " aria-controls="eventTable" data-dt-idx="5" tabindex="0">5</a></span><a class="paginate_button next" aria-controls="eventTable" data-dt-idx="6" tabindex="0" id="eventTable_next">Next</a></div></div>
+                     </span>
+                  </div>
+               </div>
+            </div>
+         </div> 
+
+         <div class="card-earning-mob_events hidden-bigDevice">
+            <div class="upcommimgEarningDiv" style="position:relative;">
+               <div>
+                  <span><h3 class="card-title">Upcoming Earnings Report</h3></span>
+                  <span class="infoOfEarning-mob open-popover" data-popover=".popover-earning-mob">
+                  <img class="portfolio-iTag lozad" data-src="img/info-icon.svg"></span>
+               </div>
+            
+               <div class="popover popover-earning-mob">
+                  <div class="popover-angle on-top"></div>
+                  <div class="popover-inner">
+                     <div class="content-block">
+                        <p>This is a list of stocks with highest market cap that will be reporting earnings in the coming weeks.</p>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="scroll-wrapper">
+                  <div class="scroll-calenderTable">
+                     <table id="earningTable-mob" class="earningTable calenderEventTable" cellpadding="0" cellspacing="0">
+                        <thead>
+                              <tr>
+                                 <th class="sticky-col">Company</th>
+                                 <!-- <th>Company</th> -->
+                                 <th>Earning Due Date</th>
+                                 <th>Industry Name</th>
+                                 <!-- <th>Current Price</th>
+                                 <th>Price % Change</th>
+                                 <th>Volume % Change</th> -->
+                              </tr>
+                        </thead>
+                        <tbody>
+                           
+                              <tr>
+                                 <td class="sticky-col"><a onclick="landingController.navigationListEarningReport(&#39;APOLLOHOSP&#39;);">Apollo Hosps.Enterprise</a></td>
+                                 <!-- <td></td> -->
+                                 <td data-order="2020-06-22">22-06-2020</td>
+                                 <td>Medical-Hospitals</td>
+                                 <!-- <td>133.9</td>
+                                 <td>1.25</td>
+                                 <td>88</td> -->
+                              </tr>
+                           
+                              <tr>
+                                 <td class="sticky-col"><a onclick="landingController.navigationListEarningReport(&#39;JTEKTINDIA&#39;);">Jtekt India</a></td>
+                                 <!-- <td></td> -->
+                                 <td data-order="2020-06-22">22-06-2020</td>
+                                 <td>Auto/Truck-Original Eqp</td>
+                                 <!-- <td>133.9</td>
+                                 <td>1.25</td>
+                                 <td>88</td> -->
+                              </tr>
+                           
+                              <tr>
+                                 <td class="sticky-col"><a onclick="landingController.navigationListEarningReport(&#39;HBLPOWER&#39;);">Hbl Power Systems</a></td>
+                                 <!-- <td></td> -->
+                                 <td data-order="2020-06-22">22-06-2020</td>
+                                 <td>Electrical-Power/Equipmt</td>
+                                 <!-- <td>133.9</td>
+                                 <td>1.25</td>
+                                 <td>88</td> -->
+                              </tr>
+                           
+                              <tr>
+                                 <td class="sticky-col"><a onclick="landingController.navigationListEarningReport(&#39;AIAENG&#39;);">Aia Engineering</a></td>
+                                 <!-- <td></td> -->
+                                 <td data-order="2020-06-22">22-06-2020</td>
+                                 <td>Machinery-Gen Industrial</td>
+                                 <!-- <td>133.9</td>
+                                 <td>1.25</td>
+                                 <td>88</td> -->
+                              </tr>
+                           
+                              <tr>
+                                 <td class="sticky-col"><a onclick="landingController.navigationListEarningReport(&#39;BALAMINES&#39;);">Balaji Amines Limited</a></td>
+                                 <!-- <td></td> -->
+                                 <td data-order="2020-06-22">22-06-2020</td>
+                                 <td>Chemicals-Specialty</td>
+                                 <!-- <td>133.9</td>
+                                 <td>1.25</td>
+                                 <td>88</td> -->
+                              </tr>
+                           
+                              <tr>
+                                 <td class="sticky-col"><a onclick="landingController.navigationListEarningReport(&#39;ONMOBILE&#39;);">Onmobile Global (Nse)</a></td>
+                                 <!-- <td></td> -->
+                                 <td data-order="2020-06-22">22-06-2020</td>
+                                 <td>Computer Sftwr-Desktop</td>
+                                 <!-- <td>133.9</td>
+                                 <td>1.25</td>
+                                 <td>88</td> -->
+                              </tr>
+                           
+                              <tr>
+                                 <td class="sticky-col"><a onclick="landingController.navigationListEarningReport(&#39;UNITEDTEA&#39;);">The Utd.Nilgiri Tea Ests</a></td>
+                                 <!-- <td></td> -->
+                                 <td data-order="2020-06-22">22-06-2020</td>
+                                 <td>Food-Packaged</td>
+                                 <!-- <td>133.9</td>
+                                 <td>1.25</td>
+                                 <td>88</td> -->
+                              </tr>
+                           
+                              <tr>
+                                 <td class="sticky-col"><a onclick="landingController.navigationListEarningReport(&#39;SURANASOL&#39;);">Surana Ventures</a></td>
+                                 <!-- <td></td> -->
+                                 <td data-order="2020-06-23">23-06-2020</td>
+                                 <td>Energy-Solar</td>
+                                 <!-- <td>133.9</td>
+                                 <td>1.25</td>
+                                 <td>88</td> -->
+                              </tr>
+                           
+                              <tr>
+                                 <td class="sticky-col"><a onclick="landingController.navigationListEarningReport(&#39;SUMMITSEC&#39;);">Summit Securities</a></td>
+                                 <!-- <td></td> -->
+                                 <td data-order="2020-06-23">23-06-2020</td>
+                                 <td>Financial Svcs-Specialty</td>
+                                 <!-- <td>133.9</td>
+                                 <td>1.25</td>
+                                 <td>88</td> -->
+                              </tr>
+                           
+                              <tr>
+                                 <td class="sticky-col"><a onclick="landingController.navigationListEarningReport(&#39;SURANAT&amp;P&#39;);">Surana Telecom &amp; Power</a></td>
+                                 <!-- <td></td> -->
+                                 <td data-order="2020-06-23">23-06-2020</td>
+                                 <td>Telecom-Fiber Optics</td>
+                                 <!-- <td>133.9</td>
+                                 <td>1.25</td>
+                                 <td>88</td> -->
+                              </tr>
+                           
+                              <tr>
+                                 <td class="sticky-col"><a onclick="landingController.navigationListEarningReport(&#39;BHAGYAPROP&#39;);">Bhagyanagar Properties</a></td>
+                                 <!-- <td></td> -->
+                                 <td data-order="2020-06-23">23-06-2020</td>
+                                 <td>Real Estate Dvlpmt/Ops</td>
+                                 <!-- <td>133.9</td>
+                                 <td>1.25</td>
+                                 <td>88</td> -->
+                              </tr>
+                           
+                              <tr>
+                                 <td class="sticky-col"><a onclick="landingController.navigationListEarningReport(&#39;ASTERDM&#39;);">Aster Dm Healthcare</a></td>
+                                 <!-- <td></td> -->
+                                 <td data-order="2020-06-23">23-06-2020</td>
+                                 <td>Medical-Hospitals</td>
+                                 <!-- <td>133.9</td>
+                                 <td>1.25</td>
+                                 <td>88</td> -->
+                              </tr>
+                           
+                              <tr>
+                                 <td class="sticky-col"><a onclick="landingController.navigationListEarningReport(&#39;JCHAC&#39;);">Johnson Contr.</a></td>
+                                 <!-- <td></td> -->
+                                 <td data-order="2020-06-23">23-06-2020</td>
+                                 <td>Hsehold-Appliances/Wares</td>
+                                 <!-- <td>133.9</td>
+                                 <td>1.25</td>
+                                 <td>88</td> -->
+                              </tr>
+                           
+                              <tr>
+                                 <td class="sticky-col"><a onclick="landingController.navigationListEarningReport(&#39;BERGEPAINT&#39;);">Berger Paints India</a></td>
+                                 <!-- <td></td> -->
+                                 <td data-order="2020-06-23">23-06-2020</td>
+                                 <td>Chemicals-Paints</td>
+                                 <!-- <td>133.9</td>
+                                 <td>1.25</td>
+                                 <td>88</td> -->
+                              </tr>
+                           
+                              <tr>
+                                 <td class="sticky-col"><a onclick="landingController.navigationListEarningReport(&#39;ALKYLAMINE&#39;);">Alkyl Amines Chemicals</a></td>
+                                 <!-- <td></td> -->
+                                 <td data-order="2020-06-23">23-06-2020</td>
+                                 <td>Chemicals-Specialty</td>
+                                 <!-- <td>133.9</td>
+                                 <td>1.25</td>
+                                 <td>88</td> -->
+                              </tr>
+                           
+                              <tr>
+                                 <td class="sticky-col"><a onclick="landingController.navigationListEarningReport(&#39;BSL&#39;);">B S L</a></td>
+                                 <!-- <td></td> -->
+                                 <td data-order="2020-06-23">23-06-2020</td>
+                                 <td>Apparel-Clothing Mfg</td>
+                                 <!-- <td>133.9</td>
+                                 <td>1.25</td>
+                                 <td>88</td> -->
+                              </tr>
+                           
+                              <tr>
+                                 <td class="sticky-col"><a onclick="landingController.navigationListEarningReport(&#39;BHAGYANGR&#39;);">Bhagyanagar India</a></td>
+                                 <!-- <td></td> -->
+                                 <td data-order="2020-06-23">23-06-2020</td>
+                                 <td>Electrical-Power/Equipmt</td>
+                                 <!-- <td>133.9</td>
+                                 <td>1.25</td>
+                                 <td>88</td> -->
+                              </tr>
+                           
+                              <tr>
+                                 <td class="sticky-col"><a onclick="landingController.navigationListEarningReport(&#39;GMBREW&#39;);">G M Breweries</a></td>
+                                 <!-- <td></td> -->
+                                 <td data-order="2020-06-23">23-06-2020</td>
+                                 <td>Beverages-Alcoholic</td>
+                                 <!-- <td>133.9</td>
+                                 <td>1.25</td>
+                                 <td>88</td> -->
+                              </tr>
+                           
+                              <tr>
+                                 <td class="sticky-col"><a onclick="landingController.navigationListEarningReport(&#39;ASIANPAINT&#39;);">Asian Paints</a></td>
+                                 <!-- <td></td> -->
+                                 <td data-order="2020-06-23">23-06-2020</td>
+                                 <td>Chemicals-Paints</td>
+                                 <!-- <td>133.9</td>
+                                 <td>1.25</td>
+                                 <td>88</td> -->
+                              </tr>
+                           
+                              <tr>
+                                 <td class="sticky-col"><a onclick="landingController.navigationListEarningReport(&#39;BANARISUG&#39;);">Bannari Amman (Nse) Sugars</a></td>
+                                 <!-- <td></td> -->
+                                 <td data-order="2020-06-24">24-06-2020</td>
+                                 <td>Food-Packaged</td>
+                                 <!-- <td>133.9</td>
+                                 <td>1.25</td>
+                                 <td>88</td> -->
+                              </tr>
+                           
+                              <tr>
+                                 <td class="sticky-col"><a onclick="landingController.navigationListEarningReport(&#39;ESABINDIA&#39;);">Esab India (Nse)</a></td>
+                                 <!-- <td></td> -->
+                                 <td data-order="2020-06-24">24-06-2020</td>
+                                 <td>Machinery-Gen Industrial</td>
+                                 <!-- <td>133.9</td>
+                                 <td>1.25</td>
+                                 <td>88</td> -->
+                              </tr>
+                           
+                              <tr>
+                                 <td class="sticky-col"><a onclick="landingController.navigationListEarningReport(&#39;INDOCO&#39;);">Indoco Remedies</a></td>
+                                 <!-- <td></td> -->
+                                 <td data-order="2020-06-24">24-06-2020</td>
+                                 <td>Medical-Diversified</td>
+                                 <!-- <td>133.9</td>
+                                 <td>1.25</td>
+                                 <td>88</td> -->
+                              </tr>
+                           
+                              <tr>
+                                 <td class="sticky-col"><a onclick="landingController.navigationListEarningReport(&#39;ASTRAMICRO&#39;);">Astra Microwave Prds.</a></td>
+                                 <!-- <td></td> -->
+                                 <td data-order="2020-06-24">24-06-2020</td>
+                                 <td>Elec-Misc Products</td>
+                                 <!-- <td>133.9</td>
+                                 <td>1.25</td>
+                                 <td>88</td> -->
+                              </tr>
+                           
+                              <tr>
+                                 <td class="sticky-col"><a onclick="landingController.navigationListEarningReport(&#39;INDIACEM&#39;);">India Cements (Nse)</a></td>
+                                 <!-- <td></td> -->
+                                 <td data-order="2020-06-24">24-06-2020</td>
+                                 <td>Bldg-Cement/Concrt/Ag</td>
+                                 <!-- <td>133.9</td>
+                                 <td>1.25</td>
+                                 <td>88</td> -->
+                              </tr>
+                           
+                              <tr>
+                                 <td class="sticky-col"><a onclick="landingController.navigationListEarningReport(&#39;ASIANTILES&#39;);">Asian Granito India</a></td>
+                                 <!-- <td></td> -->
+                                 <td data-order="2020-06-24">24-06-2020</td>
+                                 <td>Bldg-Constr Prds/Misc</td>
+                                 <!-- <td>133.9</td>
+                                 <td>1.25</td>
+                                 <td>88</td> -->
+                              </tr>
+                           
+                              <tr>
+                                 <td class="sticky-col"><a onclick="landingController.navigationListEarningReport(&#39;PFC&#39;);">Power Finance</a></td>
+                                 <!-- <td></td> -->
+                                 <td data-order="2020-06-24">24-06-2020</td>
+                                 <td>Financial Svcs-Specialty</td>
+                                 <!-- <td>133.9</td>
+                                 <td>1.25</td>
+                                 <td>88</td> -->
+                              </tr>
+                           
+                              <tr>
+                                 <td class="sticky-col"><a onclick="landingController.navigationListEarningReport(&#39;TIDEWATER&#39;);">Tide Water Oil India</a></td>
+                                 <!-- <td></td> -->
+                                 <td data-order="2020-06-24">24-06-2020</td>
+                                 <td>Oil&amp;Gas-Refining/Mktg</td>
+                                 <!-- <td>133.9</td>
+                                 <td>1.25</td>
+                                 <td>88</td> -->
+                              </tr>
+                           
+                              <tr>
+                                 <td class="sticky-col"><a onclick="landingController.navigationListEarningReport(&#39;TTKPRESTIG&#39;);">Ttk Prestige</a></td>
+                                 <!-- <td></td> -->
+                                 <td data-order="2020-06-25">25-06-2020</td>
+                                 <td>Hsehold-Appliances/Wares</td>
+                                 <!-- <td>133.9</td>
+                                 <td>1.25</td>
+                                 <td>88</td> -->
+                              </tr>
+                           
+                              <tr>
+                                 <td class="sticky-col"><a onclick="landingController.navigationListEarningReport(&#39;KCPSUGIND&#39;);">Kcp Sugar &amp; Inds.</a></td>
+                                 <!-- <td></td> -->
+                                 <td data-order="2020-06-25">25-06-2020</td>
+                                 <td>Food-Packaged</td>
+                                 <!-- <td>133.9</td>
+                                 <td>1.25</td>
+                                 <td>88</td> -->
+                              </tr>
+                           
+                              <tr>
+                                 <td class="sticky-col"><a onclick="landingController.navigationListEarningReport(&#39;INSECTICID&#39;);">Insecticides India</a></td>
+                                 <!-- <td></td> -->
+                                 <td data-order="2020-06-25">25-06-2020</td>
+                                 <td>Chemicals-Agricultural</td>
+                                 <!-- <td>133.9</td>
+                                 <td>1.25</td>
+                                 <td>88</td> -->
+                              </tr>
+                           
+                              <tr>
+                                 <td class="sticky-col"><a onclick="landingController.navigationListEarningReport(&#39;BANARBEADS&#39;);">Banaras Beads</a></td>
+                                 <!-- <td></td> -->
+                                 <td data-order="2020-06-25">25-06-2020</td>
+                                 <td>Retail/Whlsle-Jewelry</td>
+                                 <!-- <td>133.9</td>
+                                 <td>1.25</td>
+                                 <td>88</td> -->
+                              </tr>
+                           
+                              <tr>
+                                 <td class="sticky-col"><a onclick="landingController.navigationListEarningReport(&#39;INTEGRA&#39;);">Integra Garments &amp; Text.</a></td>
+                                 <!-- <td></td> -->
+                                 <td data-order="2020-06-25">25-06-2020</td>
+                                 <td>Apparel-Clothing Mfg</td>
+                                 <!-- <td>133.9</td>
+                                 <td>1.25</td>
+                                 <td>88</td> -->
+                              </tr>
+                           
+                              <tr>
+                                 <td class="sticky-col"><a onclick="landingController.navigationListEarningReport(&#39;SALONA&#39;);">Salona Cotspin</a></td>
+                                 <!-- <td></td> -->
+                                 <td data-order="2020-06-25">25-06-2020</td>
+                                 <td>Apparel-Clothing Mfg</td>
+                                 <!-- <td>133.9</td>
+                                 <td>1.25</td>
+                                 <td>88</td> -->
+                              </tr>
+                           
+                              <tr>
+                                 <td class="sticky-col"><a onclick="landingController.navigationListEarningReport(&#39;BEARDSELL&#39;);">Beardsell</a></td>
+                                 <!-- <td></td> -->
+                                 <td data-order="2020-06-25">25-06-2020</td>
+                                 <td>Machinery-Gen Industrial</td>
+                                 <!-- <td>133.9</td>
+                                 <td>1.25</td>
+                                 <td>88</td> -->
+                              </tr>
+                           
+                              <tr>
+                                 <td class="sticky-col"><a onclick="landingController.navigationListEarningReport(&#39;HAL&#39;);">Hindustan Aeronautics</a></td>
+                                 <!-- <td></td> -->
+                                 <td data-order="2020-06-25">25-06-2020</td>
+                                 <td>Aerospace/Defense</td>
+                                 <!-- <td>133.9</td>
+                                 <td>1.25</td>
+                                 <td>88</td> -->
+                              </tr>
+                           
+                              <tr>
+                                 <td class="sticky-col"><a onclick="landingController.navigationListEarningReport(&#39;OSWALAGRO&#39;);">Oswal Agro Mills</a></td>
+                                 <!-- <td></td> -->
+                                 <td data-order="2020-06-25">25-06-2020</td>
+                                 <td>Comml Svcs-Outsourcing</td>
+                                 <!-- <td>133.9</td>
+                                 <td>1.25</td>
+                                 <td>88</td> -->
+                              </tr>
+                           
+                              <tr>
+                                 <td class="sticky-col"><a onclick="landingController.navigationListEarningReport(&#39;ENDURANCE&#39;);">Endurance Technologies</a></td>
+                                 <!-- <td></td> -->
+                                 <td data-order="2020-06-25">25-06-2020</td>
+                                 <td>Auto/Truck-Original Eqp</td>
+                                 <!-- <td>133.9</td>
+                                 <td>1.25</td>
+                                 <td>88</td> -->
+                              </tr>
+                           
+                              <tr>
+                                 <td class="sticky-col"><a onclick="landingController.navigationListEarningReport(&#39;BINDALAGRO&#39;);">Oswal Greentech</a></td>
+                                 <!-- <td></td> -->
+                                 <td data-order="2020-06-25">25-06-2020</td>
+                                 <td>Real Estate Dvlpmt/Ops</td>
+                                 <!-- <td>133.9</td>
+                                 <td>1.25</td>
+                                 <td>88</td> -->
+                              </tr>
+                           
+                              <tr>
+                                 <td class="sticky-col"><a onclick="landingController.navigationListEarningReport(&#39;ZUARIGLOB&#39;);">Zuari Industries (Nse)</a></td>
+                                 <!-- <td></td> -->
+                                 <td data-order="2020-06-25">25-06-2020</td>
+                                 <td>Real Estate Dvlpmt/Ops</td>
+                                 <!-- <td>133.9</td>
+                                 <td>1.25</td>
+                                 <td>88</td> -->
+                              </tr>
+                           
+                              <tr>
+                                 <td class="sticky-col"><a onclick="landingController.navigationListEarningReport(&#39;TAJGVK&#39;);">Taj Gvk Htls.Rsts. (Nse)</a></td>
+                                 <!-- <td></td> -->
+                                 <td data-order="2020-06-25">25-06-2020</td>
+                                 <td>Leisure-Lodging</td>
+                                 <!-- <td>133.9</td>
+                                 <td>1.25</td>
+                                 <td>88</td> -->
+                              </tr>
+                           
+                              <tr>
+                                 <td class="sticky-col"><a onclick="landingController.navigationListEarningReport(&#39;JBCHEPHARM&#39;);">Jb Chemicals &amp; Pha.(Nse)</a></td>
+                                 <!-- <td></td> -->
+                                 <td data-order="2020-06-25">25-06-2020</td>
+                                 <td>Medical-Diversified</td>
+                                 <!-- <td>133.9</td>
+                                 <td>1.25</td>
+                                 <td>88</td> -->
+                              </tr>
+                           
+                              <tr>
+                                 <td class="sticky-col"><a onclick="landingController.navigationListEarningReport(&#39;ASHOKLEY&#39;);">Ashok Leyland</a></td>
+                                 <!-- <td></td> -->
+                                 <td data-order="2020-06-25">25-06-2020</td>
+                                 <td>Auto Manufacturers</td>
+                                 <!-- <td>133.9</td>
+                                 <td>1.25</td>
+                                 <td>88</td> -->
+                              </tr>
+                           
+                              <tr>
+                                 <td class="sticky-col"><a onclick="landingController.navigationListEarningReport(&#39;CONCOR&#39;);">Container Corp.Of India</a></td>
+                                 <!-- <td></td> -->
+                                 <td data-order="2020-06-25">25-06-2020</td>
+                                 <td>Transportation-Logistics</td>
+                                 <!-- <td>133.9</td>
+                                 <td>1.25</td>
+                                 <td>88</td> -->
+                              </tr>
+                           
+                              <tr>
+                                 <td class="sticky-col"><a onclick="landingController.navigationListEarningReport(&#39;MIRCELECTR&#39;);">Mirc Electronics (Nse)</a></td>
+                                 <!-- <td></td> -->
+                                 <td data-order="2020-06-26">26-06-2020</td>
+                                 <td>Hsehold-Appliances/Wares</td>
+                                 <!-- <td>133.9</td>
+                                 <td>1.25</td>
+                                 <td>88</td> -->
+                              </tr>
+                           
+                              <tr>
+                                 <td class="sticky-col"><a onclick="landingController.navigationListEarningReport(&#39;FMGOETZE&#39;);">Federal-Mul.Gtz. (Nse) (India)</a></td>
+                                 <!-- <td></td> -->
+                                 <td data-order="2020-06-26">26-06-2020</td>
+                                 <td>Auto/Truck-Original Eqp</td>
+                                 <!-- <td>133.9</td>
+                                 <td>1.25</td>
+                                 <td>88</td> -->
+                              </tr>
+                           
+                              <tr>
+                                 <td class="sticky-col"><a onclick="landingController.navigationListEarningReport(&#39;SHIVATEX&#39;);">Shiva Texyarn</a></td>
+                                 <!-- <td></td> -->
+                                 <td data-order="2020-06-26">26-06-2020</td>
+                                 <td>Apparel-Clothing Mfg</td>
+                                 <!-- <td>133.9</td>
+                                 <td>1.25</td>
+                                 <td>88</td> -->
+                              </tr>
+                           
+                              <tr>
+                                 <td class="sticky-col"><a onclick="landingController.navigationListEarningReport(&#39;STERTOOLS&#39;);">Sterling Tools</a></td>
+                                 <!-- <td></td> -->
+                                 <td data-order="2020-06-26">26-06-2020</td>
+                                 <td>Machinery-Gen Industrial</td>
+                                 <!-- <td>133.9</td>
+                                 <td>1.25</td>
+                                 <td>88</td> -->
+                              </tr>
+                           
+                              <tr>
+                                 <td class="sticky-col"><a onclick="landingController.navigationListEarningReport(&#39;SHREEPUSHK&#39;);">Shree Pushkar</a></td>
+                                 <!-- <td></td> -->
+                                 <td data-order="2020-06-26">26-06-2020</td>
+                                 <td>Chemicals-Specialty</td>
+                                 <!-- <td>133.9</td>
+                                 <td>1.25</td>
+                                 <td>88</td> -->
+                              </tr>
+                           
+                              <tr>
+                                 <td class="sticky-col"><a onclick="landingController.navigationListEarningReport(&#39;COALINDIA&#39;);">Coal India (Nse)</a></td>
+                                 <!-- <td></td> -->
+                                 <td data-order="2020-06-26">26-06-2020</td>
+                                 <td>Energy-Coal</td>
+                                 <!-- <td>133.9</td>
+                                 <td>1.25</td>
+                                 <td>88</td> -->
+                              </tr>
+                           
+                              <tr>
+                                 <td class="sticky-col"><a onclick="landingController.navigationListEarningReport(&#39;RUSHIL&#39;);">Rushil Decor</a></td>
+                                 <!-- <td></td> -->
+                                 <td data-order="2020-06-27">27-06-2020</td>
+                                 <td>Bldg-Wood Prds</td>
+                                 <!-- <td>133.9</td>
+                                 <td>1.25</td>
+                                 <td>88</td> -->
+                              </tr>
+                           
+                              <tr>
+                                 <td class="sticky-col"><a onclick="landingController.navigationListEarningReport(&#39;SANDHAR&#39;);">Sandhar Technologies</a></td>
+                                 <!-- <td></td> -->
+                                 <td data-order="2020-06-27">27-06-2020</td>
+                                 <td>Auto/Truck-Tires &amp; Misc</td>
+                                 <!-- <td>133.9</td>
+                                 <td>1.25</td>
+                                 <td>88</td> -->
+                              </tr>
+                           
+                              <tr>
+                                 <td class="sticky-col"><a onclick="landingController.navigationListEarningReport(&#39;INDNIPPON&#39;);">India Nippon Electricals</a></td>
+                                 <!-- <td></td> -->
+                                 <td data-order="2020-06-27">27-06-2020</td>
+                                 <td>Auto/Truck-Original Eqp</td>
+                                 <!-- <td>133.9</td>
+                                 <td>1.25</td>
+                                 <td>88</td> -->
+                              </tr>
+                           
+                              <tr>
+                                 <td class="sticky-col"><a onclick="landingController.navigationListEarningReport(&#39;MUKANDENGG&#39;);">Mukand Engineers</a></td>
+                                 <!-- <td></td> -->
+                                 <td data-order="2020-06-27">27-06-2020</td>
+                                 <td>Bldg-Heavy Construction</td>
+                                 <!-- <td>133.9</td>
+                                 <td>1.25</td>
+                                 <td>88</td> -->
+                              </tr>
+                           
+                              <tr>
+                                 <td class="sticky-col"><a onclick="landingController.navigationListEarningReport(&#39;NOCIL&#39;);">Nocil</a></td>
+                                 <!-- <td></td> -->
+                                 <td data-order="2020-06-29">29-06-2020</td>
+                                 <td>Chemicals-Specialty</td>
+                                 <!-- <td>133.9</td>
+                                 <td>1.25</td>
+                                 <td>88</td> -->
+                              </tr>
+                           
+                              <tr>
+                                 <td class="sticky-col"><a onclick="landingController.navigationListEarningReport(&#39;NIPPOBATRY&#39;);">Indo National</a></td>
+                                 <!-- <td></td> -->
+                                 <td data-order="2020-06-29">29-06-2020</td>
+                                 <td>Electrical-Power/Equipmt</td>
+                                 <!-- <td>133.9</td>
+                                 <td>1.25</td>
+                                 <td>88</td> -->
+                              </tr>
+                           
+                              <tr>
+                                 <td class="sticky-col"><a onclick="landingController.navigationListEarningReport(&#39;HIMATSEIDE&#39;);">Himatsingka Seide</a></td>
+                                 <!-- <td></td> -->
+                                 <td data-order="2020-06-29">29-06-2020</td>
+                                 <td>Apparel-Clothing Mfg</td>
+                                 <!-- <td>133.9</td>
+                                 <td>1.25</td>
+                                 <td>88</td> -->
+                              </tr>
+                           
+                              <tr>
+                                 <td class="sticky-col"><a onclick="landingController.navigationListEarningReport(&#39;RAYMOND&#39;);">Raymond (Nse)</a></td>
+                                 <!-- <td></td> -->
+                                 <td data-order="2020-06-29">29-06-2020</td>
+                                 <td>Apparel-Clothing Mfg</td>
+                                 <!-- <td>133.9</td>
+                                 <td>1.25</td>
+                                 <td>88</td> -->
+                              </tr>
+                           
+                              <tr>
+                                 <td class="sticky-col"><a onclick="landingController.navigationListEarningReport(&#39;BEL&#39;);">Bharat Electronics</a></td>
+                                 <!-- <td></td> -->
+                                 <td data-order="2020-06-29">29-06-2020</td>
+                                 <td>Aerospace/Defense</td>
+                                 <!-- <td>133.9</td>
+                                 <td>1.25</td>
+                                 <td>88</td> -->
+                              </tr>
+                           
+                              <tr>
+                                 <td class="sticky-col"><a onclick="landingController.navigationListEarningReport(&#39;MOTOGENFIN&#39;);">Motor &amp; General Finance</a></td>
+                                 <!-- <td></td> -->
+                                 <td data-order="2020-06-29">29-06-2020</td>
+                                 <td>Real Estate Dvlpmt/Ops</td>
+                                 <!-- <td>133.9</td>
+                                 <td>1.25</td>
+                                 <td>88</td> -->
+                              </tr>
+                           
+                              <tr>
+                                 <td class="sticky-col"><a onclick="landingController.navigationListEarningReport(&#39;SHREYAS&#39;);">Shreyas Ship.&amp; Logist.</a></td>
+                                 <!-- <td></td> -->
+                                 <td data-order="2020-06-29">29-06-2020</td>
+                                 <td>Transportation-Ship</td>
+                                 <!-- <td>133.9</td>
+                                 <td>1.25</td>
+                                 <td>88</td> -->
+                              </tr>
+                           
+                              <tr>
+                                 <td class="sticky-col"><a onclick="landingController.navigationListEarningReport(&#39;CENTRALBK&#39;);">Central Bank Of India</a></td>
+                                 <!-- <td></td> -->
+                                 <td data-order="2020-06-29">29-06-2020</td>
+                                 <td>Banks-Money Center</td>
+                                 <!-- <td>133.9</td>
+                                 <td>1.25</td>
+                                 <td>88</td> -->
+                              </tr>
+                           
+                              <tr>
+                                 <td class="sticky-col"><a onclick="landingController.navigationListEarningReport(&#39;MSTCLTD&#39;);">Mstc</a></td>
+                                 <!-- <td></td> -->
+                                 <td data-order="2020-06-29">29-06-2020</td>
+                                 <td>Retail-Internet</td>
+                                 <!-- <td>133.9</td>
+                                 <td>1.25</td>
+                                 <td>88</td> -->
+                              </tr>
+                           
+                              <tr>
+                                 <td class="sticky-col"><a onclick="landingController.navigationListEarningReport(&#39;SJVN&#39;);">Satluj Jal Vidyut Nigam</a></td>
+                                 <!-- <td></td> -->
+                                 <td data-order="2020-06-29">29-06-2020</td>
+                                 <td>Energy-Alternative/Other</td>
+                                 <!-- <td>133.9</td>
+                                 <td>1.25</td>
+                                 <td>88</td> -->
+                              </tr>
+                           
+                              <tr>
+                                 <td class="sticky-col"><a onclick="landingController.navigationListEarningReport(&#39;LAMBODHARA&#39;);">Lambodhara Textiles</a></td>
+                                 <!-- <td></td> -->
+                                 <td data-order="2020-06-30">30-06-2020</td>
+                                 <td>Apparel-Clothing Mfg</td>
+                                 <!-- <td>133.9</td>
+                                 <td>1.25</td>
+                                 <td>88</td> -->
+                              </tr>
+                           
+                              <tr>
+                                 <td class="sticky-col"><a onclick="landingController.navigationListEarningReport(&#39;SUPERHOUSE&#39;);">Superhouse</a></td>
+                                 <!-- <td></td> -->
+                                 <td data-order="2020-06-30">30-06-2020</td>
+                                 <td>Apparel-Clothing Mfg</td>
+                                 <!-- <td>133.9</td>
+                                 <td>1.25</td>
+                                 <td>88</td> -->
+                              </tr>
+                           
+                              <tr>
+                                 <td class="sticky-col"><a onclick="landingController.navigationListEarningReport(&#39;AVTNPL&#39;);">Avt Natural Prds.</a></td>
+                                 <!-- <td></td> -->
+                                 <td data-order="2020-06-30">30-06-2020</td>
+                                 <td>Food-Misc Preparation</td>
+                                 <!-- <td>133.9</td>
+                                 <td>1.25</td>
+                                 <td>88</td> -->
+                              </tr>
+                           
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+            </div>
+         </div> 
+
+         <div class="card-economic-mob_events hidden-bigDevice">
+            <div class="upcommimgEconomicDiv" style="position:relative;">
+               <div>
+                  <span><h3 class="card-title">Upcoming Economic Report</h3></span>
+                  <span class="infoOfEarning-mob open-popover" data-popover=".popover-calendar-mob">
+                  <img class="portfolio-iTag lozad" data-src="img/info-icon.svg"></span>
+               </div>
+            
+               <div class="popover popover-calendar-mob">
+                  <div class="popover-angle on-top"></div>
+                  <div class="popover-inner">
+                     <div class="content-block">
+                       <p>This is a list of key global economic event for upcoming month.</p>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="scroll-wrapper">
+                  <div class="scroll-calenderTable">
+                     <table id="eventTable-mob" class="eventTable calenderEventTable" cellpadding="0" cellspacing="0">
+                           <thead>
+                                 <tr>
+                                    <th class="sticky-col">Event Date</th>
+                                    <th>Event Day</th>
+                                    <th>Country</th>
+                                    <th>Event</th>
+                                 </tr>
+                           </thead>
+                           <tbody>
+                              
+                                 <tr>
+                                    <td class="sticky-col" data-order="2020-06-22">22-06-2020</td>
+                                    <td>Mon</td>
+                                    <td>China</td>
+                                    <td>Loan Prime Rate 1Y</td>
+                                 </tr>
+                              
+                                 <tr>
+                                    <td class="sticky-col" data-order="2020-06-22">22-06-2020</td>
+                                    <td>Mon</td>
+                                    <td>China</td>
+                                    <td>Loan Prime Rate 5Y JUN</td>
+                                 </tr>
+                              
+                                 <tr>
+                                    <td class="sticky-col" data-order="2020-06-25">25-06-2020</td>
+                                    <td>Thu</td>
+                                    <td>U.S.</td>
+                                    <td>GDP Growth Rate QoQ Final Q1	</td>
+                                 </tr>
+                              
+                                 <tr>
+                                    <td class="sticky-col" data-order="2020-06-26">26-06-2020</td>
+                                    <td>Fri</td>
+                                    <td>India</td>
+                                    <td>Foreign Exchange Reserves JUN/19</td>
+                                 </tr>
+                              
+                                 <tr>
+                                    <td class="sticky-col" data-order="2020-06-30">30-06-2020</td>
+                                    <td>Tue</td>
+                                    <td>India</td>
+                                    <td>Government Budget Value MAY	</td>
+                                 </tr>
+                              
+                                 <tr>
+                                    <td class="sticky-col" data-order="2020-06-30">30-06-2020</td>
+                                    <td>Tue</td>
+                                    <td>India</td>
+                                    <td>Infrastructure Output YoY MAY</td>
+                                 </tr>
+                              
+                                 <tr>
+                                    <td class="sticky-col" data-order="2020-06-30">30-06-2020</td>
+                                    <td>Tue</td>
+                                    <td>China</td>
+                                    <td>NBS Manufacturing PMI JUN</td>
+                                 </tr>
+                              
+                                 <tr>
+                                    <td class="sticky-col" data-order="2020-06-30">30-06-2020</td>
+                                    <td>Tue</td>
+                                    <td>China</td>
+                                    <td>Non Manufacturing PMI JUN</td>
+                                 </tr>
+                              
+                                 <tr>
+                                    <td class="sticky-col" data-order="2020-07-01">01-07-2020</td>
+                                    <td>Wed</td>
+                                    <td>U.S.</td>
+                                    <td>Markit Manufacturing PMI Final JUN</td>
+                                 </tr>
+                              
+                                 <tr>
+                                    <td class="sticky-col" data-order="2020-07-01">01-07-2020</td>
+                                    <td>Wed</td>
+                                    <td>India</td>
+                                    <td>Markit Manufacturing PMI JUN</td>
+                                 </tr>
+                              
+                                 <tr>
+                                    <td class="sticky-col" data-order="2020-07-01">01-07-2020</td>
+                                    <td>Wed</td>
+                                    <td>China</td>
+                                    <td>Caixin Manufacturing PMI JUN</td>
+                                 </tr>
+                              
+                                 <tr>
+                                    <td class="sticky-col" data-order="2020-07-02">02-07-2020</td>
+                                    <td>Thu</td>
+                                    <td>U.S.</td>
+                                    <td>Balance of Trade MAY</td>
+                                 </tr>
+                              
+                                 <tr>
+                                    <td class="sticky-col" data-order="2020-07-02">02-07-2020</td>
+                                    <td>Thu</td>
+                                    <td>U.S.</td>
+                                    <td>Imports MAY</td>
+                                 </tr>
+                              
+                                 <tr>
+                                    <td class="sticky-col" data-order="2020-07-02">02-07-2020</td>
+                                    <td>Thu</td>
+                                    <td>U.S.</td>
+                                    <td>Unemployment Rate JUN</td>
+                                 </tr>
+                              
+                                 <tr>
+                                    <td class="sticky-col" data-order="2020-07-02">02-07-2020</td>
+                                    <td>Thu</td>
+                                    <td>U.S.</td>
+                                    <td>Exports MAY</td>
+                                 </tr>
+                              
+                                 <tr>
+                                    <td class="sticky-col" data-order="2020-07-03">03-07-2020</td>
+                                    <td>Fri</td>
+                                    <td>India</td>
+                                    <td>Foreign Exchange Reserves JUN/26</td>
+                                 </tr>
+                              
+                                 <tr>
+                                    <td class="sticky-col" data-order="2020-07-03">03-07-2020</td>
+                                    <td>Fri</td>
+                                    <td>India</td>
+                                    <td>Bank Loan Growth YoY JUN/19	</td>
+                                 </tr>
+                              
+                                 <tr>
+                                    <td class="sticky-col" data-order="2020-07-03">03-07-2020</td>
+                                    <td>Fri</td>
+                                    <td>China</td>
+                                    <td>Caixin Composite PMI JUN</td>
+                                 </tr>
+                              
+                                 <tr>
+                                    <td class="sticky-col" data-order="2020-07-03">03-07-2020</td>
+                                    <td>Fri</td>
+                                    <td>China</td>
+                                    <td>Caixin Services PMI JUN</td>
+                                 </tr>
+                              
+                                 <tr>
+                                    <td class="sticky-col" data-order="2020-07-03">03-07-2020</td>
+                                    <td>Fri</td>
+                                    <td>India</td>
+                                    <td>Deposit Growth YoY JUN/19</td>
+                                 </tr>
+                              
+                                 <tr>
+                                    <td class="sticky-col" data-order="2020-07-03">03-07-2020</td>
+                                    <td>Fri</td>
+                                    <td>India</td>
+                                    <td>Markit Services PMI JUN</td>
+                                 </tr>
+                              
+                                 <tr>
+                                    <td class="sticky-col" data-order="2020-07-06">06-07-2020</td>
+                                    <td>Mon</td>
+                                    <td>U.S.</td>
+                                    <td>Markit Composite PMI Final JUN</td>
+                                 </tr>
+                              
+                                 <tr>
+                                    <td class="sticky-col" data-order="2020-07-06">06-07-2020</td>
+                                    <td>Mon</td>
+                                    <td>U.S.</td>
+                                    <td>Markit Services PMI Final JUN</td>
+                                 </tr>
+                              
+                           </tbody>
+                     </table>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="hidden-xs">
+		<div class="msFooterSection fivePaisa">
+	<div class="footerGap" style="background-color:;width:100%; height:30px;"></div>
+	<div style="background-color:#dae2e6;width:100%; height:20px;"></div>
+	<div style="background-color:#dae2e6;width:100%; height:auto;">
+	
+		
+			<div class="container">
+				<div class="">
+
+					<!-- <div class="col-sm-2">  </div> -->
+					<div class="hidden-xs col-sm-12 col-md-9 pannelBlock">
+						<div class="">
+							<div class="col-sm-4 col-md-4 col-xs-12">
+								<div class="pannel2">
+									<table>
+										<tbody><tr>
+											<td>
+												<h5>
+													<a href="https://marketsmithindia.com/mstool/trialOffer.jsp">
+												 Take a Trial</a>
+												</h5>
+																	
+												<h5>
+													<a href="file:///C:/Users/Bhavesh/Desktop/learning.jsp#/msiLearning/overview/chartsAndPatternsStory">Technical Analysis</a>
+												</h5>
+																	
+												<h5>
+													<a href="file:///C:/Users/Bhavesh/Desktop/details.jsp">Fundamental Analysis</a>
+												</h5>
+																	
+												<h5>
+													<a href="file:///C:/Users/Bhavesh/Desktop/learning.jsp#/msiLearning/buying/patterns">Pattern Recognition</a>
+												</h5>
+											</td>
+										</tr>
+									</tbody></table>
+								</div>
+							</div>
+												   
+							<div class="col-sm-4 col-md-4 col-xs-12">
+								<div class="pannel2">
+									<table>
+										<tbody><tr>
+											<td>
+												<a href="http://blog.marketsmithindia.com/"><h5>MarketSmith India Blog</h5></a>
+												<a href="file:///C:/Users/Bhavesh/Desktop/Seminar.jsp"><h5>CANSLIM Workshop</h5></a>
+												<a href="file:///C:/Users/Bhavesh/Desktop/weeklyWebinar.jsp"><h5>Webinars</h5></a>
+												<!-- <a href="investment-advisory-special-offers/seminar.html#/"> <h5>MarketSmith India Academy</h5></a> -->
+											</td>
+										</tr>
+									</tbody></table>
+								</div>
+							</div>
+
+							<div class="col-sm-4 col-md-4 col-xs-12">
+								<div class="pannel3">
+									<table>
+										<tbody><tr>
+											<td>
+												<a href="https://marketsmith.investors.com/"><h5>MarketSmith US</h5></a>
+												<a href="http://williamoneilindia.com/"><h5>William ONeil India</h5></a>
+												<a href="file:///C:/Users/Bhavesh/Desktop/learning.jsp#/msiLearning">  <h5>Investing University</h5></a>
+												<a href="file:///C:/Users/Bhavesh/Desktop/partnerwithUs.jsp#/"> <h5>Become A Partner</h5></a>
+											</td>
+										</tr>
+									</tbody></table>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-xs-12 visible-xs">
+						<div class="col-xs-6 menuMob1">
+							<table>
+								<tbody><tr>
+									<td>
+										<h5>
+											<a href="file:///C:/Users/Bhavesh/Desktop/trialOffer.jsp">Take a Trial</a>
+										</h5>
+
+										<h5>
+											<a href="file:///C:/Users/Bhavesh/Desktop/learning.jsp#/msiLearning/overview/canslimStory">CAN SLIM<sup>®</sup> </a>
+										</h5>
+										<h5>       
+											<a href="file:///C:/Users/Bhavesh/Desktop/weeklyWebinar.jsp">Webinars</a>
+										</h5>
+
+										<h5>
+											<a href="https://marketsmith.investors.com/">MarketSmith US</a>
+										</h5>
+
+										<h5>
+											<a href="file:///C:/Users/Bhavesh/Desktop/learning.jsp#/msiLearning">Investing University</a>
+										</h5>
+
+										<h5>
+											<a href="file:///C:/Users/Bhavesh/Desktop/reseller.jsp#/"> Become a Reseller</a>
+										</h5>
+									</td>
+								</tr>
+							</tbody></table>
+						</div>
+
+						<div class="col-xs-6 menuMob2">
+							<table>
+								<tbody><tr>
+									<td>
+										<h5>
+											<a href="http://williamoneilindia.com/">William ONeil India</a>
+										</h5>
+
+										<h5>
+											<a href="file:///C:/Users/Bhavesh/Desktop/learning.jsp#/msiLearning/overview/chartsAndPatternsStory">Technical Analysis</a>
+										</h5>
+																	
+										<h5>
+											<a href="file:///C:/Users/Bhavesh/Desktop/details.jsp">Fundamental Analysis</a>
+										</h5>
+																	
+										<h5>
+											<a href="file:///C:/Users/Bhavesh/Desktop/learning.jsp#/msiLearning/buying/patterns">Pattern Recognition</a>
+										</h5>
+
+										<h5>
+											<a href="http://blog.marketsmithindia.com/">MarketSmith India Blog</a>
+										</h5>
+
+										<h5>
+											<a href="file:///C:/Users/Bhavesh/Desktop/investment-advisory-special-offers/seminar.html#/"> MarketSmith India Academy</a>
+										</h5>
+									</td>
+								</tr>
+							</tbody></table>
+						</div>
+					</div>
+
+					<div class="col-xs-12 col-sm-12 col-md-3 pannelBlock2">
+						<div class="row pannel4">
+							<p class="txtCntr">Download MarketSmith India App</p>
+							<div class="row" style="margin-top: 20px;">
+								<div class="col-xs-6 col-sm-6 col-md-6">
+									<div class="col-xs-3 col-sm-3"></div>
+									<div class="col-xs-3 col-sm-offset-3 col-md-12 googleIconForTab">
+										<a href="https://play.google.com/store/apps/details?id=ind.marketsmith.androidapp&amp;referrer=utm_source%3Dmsiwebsite"><img src="./chart_files/google-play.png" class="play_store_ft" alt="Google Play Store"></a>
+									</div>
+								</div>
+								<div class="col-xs-6 col-sm-6 col-md-6 appStore-footer-div">
+									<div class="col-xs-3 col-sm-3 col-md-12 appStoreIcon">
+										<a href="https://itunes.apple.com/app/apple-store/id1198426149?pt=118546640&amp;ct=msiwebsite&amp;mt=8"><img src="./chart_files/appstore.png" class="App_Store_ft" alt="App Store"></a>
+									</div>
+									<div class="col-xs-3 col-sm-3"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--  <div class="col-sm-2"></div> -->
+				</div>
+			</div>
+
+			<div style="width:100%;height:40px;background-color:#dae2e6;"></div>
+		
+		
+
+		<div class="txtCntr" style="margin-bottom: 15px;">
+			<p style="text-align:center;">Follow us on</p>
+			<!-- social icons start -->
+			<div class="text-center">
+				<a target="_blank" href="https://www.facebook.com/MSIndiaOfficial/" alt="facebook">
+					<img src="./chart_files/fb-ft-icon.svg" class="socialiconnewfooter" alt="linkedin">
+				</a>
+				
+				<a target="_blank" href="https://www.linkedin.com/company/marketsmith-india" alt="linkedin">
+					<img src="./chart_files/li-ft-icon.svg" class="socialiconnewfooter" alt="linkedin"> 
+				</a>
+							
+				<a target="_blank" href="https://twitter.com/marketsmithind" alt="twitter">
+					<img src="./chart_files/twt-ft-icon.svg" class="socialiconnewfooter" alt="linkedin">
+				</a>
+							
+				<a target="_blank" href="https://plus.google.com/+MarketSmithIndiaMSI" alt="google plus">
+					<img src="./chart_files/gp-ft-icon.svg" class="socialiconnewfooter" alt="linkedin">
+				</a>
+							
+				<a target="_blank" href="https://www.youtube.com/c/MarketSmithIndia" alt="youtube">
+					<img src="./chart_files/yt-ft-icon.svg" class="socialiconnewfooter" alt="linkedin">
+				</a>
+			</div>
+			<!-- social icons end -->
+		</div>
+
+		<div class="container">
+			<div class="">
+				<p class="base_links">
+					<a href="file:///C:/Users/Bhavesh/Desktop/HelpCenter.jsp"> Help Center</a> |
+					<a href="file:///C:/Users/Bhavesh/Desktop/contactUs.jsp"> Contact Us</a>  |  
+					<a href="file:///C:/Users/Bhavesh/Desktop/aboutUs.jsp">About Us</a>  |   
+					<a href="file:///C:/Users/Bhavesh/Desktop/legalAgreement.jsp">Legal Agreement</a> |  
+					<a href="file:///C:/Users/Bhavesh/Desktop/privacyPolicy.jsp">Privacy Policy</a> | 
+					<a href="file:///C:/Users/Bhavesh/Desktop/sitemap.jsp"> Site Map</a>
+				</p>
+			</div>
+		</div>
+	</div>
+	
+    <!-- below footer-->
+    <style>
+        .msifooterv2
+        {
+            color:white;
+            font-family: nunito;
+            text-align:center;
+            font-weight: 300;
+            font-size: 13px;
+            color:#edf1f3;
+        }
+    </style>
+	
+		<div style="width:100%; background-color:#7994a3; height:auto;padding-top:10px;padding-bottom:10px;">
+							 <p class="msifooterv2"> 2017 William O'Neil
+								India Private Limited. All Rights Reserved.  </p>
+			<p class="msifooterv2">Investment Adviser SEBI Regn. Nos: INA200005125 valid till 11 July 2021.</p>
+							   
+		</div>
+	
+</div>
+	</div></body></html>
